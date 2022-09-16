@@ -1,0 +1,2 @@
+- 所有nginx命令使用`git bash`启动
+- 除了live-server的proxy可以使用当前端口，其他两种方式均使用代理端口访问

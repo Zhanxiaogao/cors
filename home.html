@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input></input>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    (async() => {
+      // node
+      const {data} = await axios.get('/api/admin/active/getCitySaleHeatData?token=1&type=1')
+
+      // nginx
+      // const {data} = await axios.get('/admin/active/getCitySaleHeatData?token=1&type=1')
+      
+      document.querySelector('input').value = data.map(item => item.name).join(',')
+    })()
+  </script>
+</body>
+</html>

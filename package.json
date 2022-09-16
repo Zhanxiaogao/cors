@@ -1,0 +1,23 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js",
+    "dev": "live-server --port=7878",
+    "proxy": "live-server --open=./index.html --port=8080 --proxy=/proxy:https://lays.hedgead.com",
+    "nginx:start": "bash ./nginx.sh start",
+    "nginx:stop": "bash ./nginx.sh stop",
+    "nginx:reload": "bash ./nginx.sh reload",
+    "nginx:install": "bash ./download.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "http-proxy-middleware": "^2.0.6",
+    "live-server": "^1.2.2"
+  }
+}
